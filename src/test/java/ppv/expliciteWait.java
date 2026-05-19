@@ -20,7 +20,6 @@ public class expliciteWait {
 		EdgeDriver driver = new EdgeDriver();
 		driver.manage().window().maximize();
 		
-//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		driver.get("https://www.ebay.com/");
 		
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
