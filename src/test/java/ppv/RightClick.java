@@ -27,7 +27,6 @@ public class RightClick {
 		driver.close();
 		
 		
-		
 
 	}
 
