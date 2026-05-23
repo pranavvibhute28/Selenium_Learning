@@ -31,9 +31,13 @@ public class JavaScriptExecutor {
 			String title = (String) js.executeScript(s1);
 			System.out.println(title);
 			
-			//set username
+			//set username and password
 			WebElement username = driver.findElement(By.name("username"));
-			js.executeScript("arguments[0].value='Admin';",username);
+			WebElement Pass = driver.findElement(By.name("password"));
+			String s2 = "arguments[0].value='Admin';"
+					+ "arguments[1].value='admin123';";
+			js.executeScript(s2,username,Pass);
+			
 			
 			Thread.sleep(4000);
 			driver.close();
