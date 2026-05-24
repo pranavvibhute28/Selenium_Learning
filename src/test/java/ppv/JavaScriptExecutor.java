@@ -54,9 +54,17 @@
 				String s3 = "arguments[0].style.backgroundColor = 'red';"+
 							"arguments[0].click();";
 				js.executeScript(s3, btn);
-								
+				Thread.sleep(2000);
 				
-				Thread.sleep(4000);
+				//Scroll till co-ordinates
+				js.executeScript("window.scrollBy(0,100)");
+				Thread.sleep(2000);
+				
+				//Scroll till element
+				WebElement search = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[3]/p[1]"));
+				String s4 = "arguments[0].scrollIntoView(true);";
+				js.executeScript(s4, search);
+				Thread.sleep(2000);
 				driver.close();
 		}
 	
